@@ -23,7 +23,7 @@
  * ************************************
  */
 
-function smallestSum(k, arr) {
+function smallestSub(k, arr) {
   let windowStart = 0,
       windowEnd = 0,
       windowSum = 0,
@@ -44,3 +44,5 @@ function smallestSum(k, arr) {
   
   return result;
 }
+
+module.exports = {smallestSub};
