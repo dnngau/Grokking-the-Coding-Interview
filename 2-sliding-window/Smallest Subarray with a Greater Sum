@@ -23,20 +23,24 @@
  * ************************************
  */
 
-function maxSum(k, arr) {
+function smallestSum(k, arr) {
   let windowStart = 0,
       windowEnd = 0,
       windowSum = 0,
-      result = 0;
+      result = Infinity;
 
   for (windowEnd; windowEnd < arr.length; windowEnd++) {
     windowSum += arr[windowEnd];
-    if (windowSum >= k) {
-      result = Math.max(windowSum, result);
+    while (windowSum >= k) {
+      result = Math.min(result, windowEnd - windowStart + 1);
       windowSum -= arr[windowStart];
       windowStart++;
     }
   }
 
+  if (result === Infinity) {
+    return 0;
+  }
+  
   return result;
 }

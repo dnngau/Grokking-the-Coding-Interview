@@ -35,3 +35,5 @@ function maxSum(k, arr) {
 
   return result;
 }
+
+module.exports = {maxSum};
