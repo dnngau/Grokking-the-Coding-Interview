@@ -1,6 +1,6 @@
 const {smallestSub} = require('../2-sliding-window/smallest-sub');
 
-describe('Sliding Window - Max Sum test', () => {
+describe('Smallest Subarray with a Greater Sum - Test', () => {
   let example = [2, 1, 5, 2, 3, 2];
   let k = 7;
 
