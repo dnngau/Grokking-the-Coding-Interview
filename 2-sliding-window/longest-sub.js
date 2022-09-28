@@ -24,25 +24,25 @@
  */
 
 function longestSub(k, str) {
-  const hash = {};
+  const charFrequency = {};
   let windowStart = 0,
       result = 0;
   
   for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
     const rightChar = str[windowEnd];
     
-    if (!(rightChar in hash)) {
-      hash[rightChar] = 0;
+    if (!(rightChar in charFrequency)) {
+      charFrequency[rightChar] = 0;
     }
-    hash[rightChar]+= 1;
+    charFrequency[rightChar]+= 1;
 
-    while (Object.keys(hash).length > k) {
+    while (Object.keys(charFrequency).length > k) {
       const leftChar = str[windowStart];
-      hash[leftChar]-= 1;
-      if (hash[leftChar] === 0) {
-        delete hash[leftChar];
+      charFrequency[leftChar]-= 1;
+      if (charFrequency[leftChar] === 0) {
+        delete charFrequency[leftChar];
       }
-      windowStart++;
+      windowStart += 1;
     }
 
     result = Math.max(result, windowEnd - windowStart + 1);
