@@ -25,11 +25,10 @@
 
 function smallestSub(k, arr) {
   let windowStart = 0,
-      windowEnd = 0,
       windowSum = 0,
       result = Infinity;
 
-  for (windowEnd; windowEnd < arr.length; windowEnd++) {
+  for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
     windowSum += arr[windowEnd];
     while (windowSum >= k) {
       result = Math.min(result, windowEnd - windowStart + 1);

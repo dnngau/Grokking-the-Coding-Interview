@@ -25,11 +25,10 @@
 
 function longestSub(k, str) {
   const hash = {};
-  let windowEnd = 0,
-      windowStart = 0,
+  let windowStart = 0,
       result = 0;
   
-  for (windowEnd; windowEnd < str.length; windowEnd++) {
+  for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
     const rightChar = str[windowEnd];
     
     if (!(rightChar in hash)) {

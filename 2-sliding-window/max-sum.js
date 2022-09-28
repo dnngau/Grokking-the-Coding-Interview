@@ -20,11 +20,10 @@
 
 function maxSum(k, arr) {
   let windowStart = 0,
-      windowEnd = 0,
       windowSum = 0,
       result = 0;
 
-  for (windowEnd; windowEnd < arr.length; windowEnd++) {
+  for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
     windowSum += arr[windowEnd];
     if (windowEnd >= k - 1) {
       result = Math.max(windowSum, result);
