@@ -24,18 +24,26 @@
  */
 
 function nonRepeatSub(str) {
-  const charIndex = {};
+  const charFrequency = {};
   let windowStart = 0,
       result = 0;
 
   for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
     const rightChar = str[windowEnd];
-    if (rightChar in charIndex) {
-      windowStart = Math.max(windowStart, charIndex[rightChar] + 1);
+    if (!(rightChar in charFrequency)) {
+      charFrequency[rightChar] = 0;
     }
-    
-    charIndex[rightChar] = windowEnd;
-    
+    charFrequency[rightChar] += 1;
+
+    while (charFrequency[rightChar] > 1) {
+      const leftChar = str[windowStart];
+      charFrequency[leftChar] -= 1;
+      if (charFrequency[leftChar] === 0) {
+        delete charFrequency[leftChar];
+      }
+      windowStart += 1;
+    }
+
     result = Math.max(result, windowEnd - windowStart + 1);
   }
 
