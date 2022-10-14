@@ -1,4 +1,4 @@
-const {maxSum} = require('../2-sliding-window/max-sum');
+const {maxSum} = require('../../2-sliding-window/max-sum');
 
 describe('Maximum Sum Subarray of Size K - Test', () => {
   let example = [2, 1, 5, 1, 3, 2];

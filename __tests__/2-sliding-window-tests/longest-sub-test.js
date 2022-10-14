@@ -1,4 +1,4 @@
-const {longestSub} = require('../2-sliding-window/longest-sub');
+const {longestSub} = require('../../2-sliding-window/longest-sub');
 
 describe('Longest Substring with K Distinct Characters - Test', () => {
   let example = "araaci";

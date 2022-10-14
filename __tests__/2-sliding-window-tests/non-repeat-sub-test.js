@@ -1,4 +1,4 @@
-const {nonRepeatSub} = require('../2-sliding-window/non-repeat-sub');
+const {nonRepeatSub} = require('../../2-sliding-window/non-repeat-sub');
 
 describe('Longest Substring with Distinct Characters- Test', () => {
   let example = "aabccbb";

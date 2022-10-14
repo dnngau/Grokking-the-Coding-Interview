@@ -1,4 +1,4 @@
-const {maxFruits} = require('../2-sliding-window/max-fruits');
+const {maxFruits} = require('../../2-sliding-window/max-fruits');
 
 describe('Fruits into Baskets - Test', () => {
   let example = ['A', 'B', 'C', 'A', 'C'];
