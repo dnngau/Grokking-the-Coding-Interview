@@ -24,7 +24,7 @@ function pairWithTargetSum(nums, target) {
 
   while (leftPointer < rightPointer) {
     if (nums[leftPointer] + nums[rightPointer] === target) {
-      return [leftPointer, rightPointer]
+      return [leftPointer, rightPointer];
     } else if (nums[leftPointer] + nums[rightPointer] > target) {
       rightPointer -= 1;
     } else if (nums[leftPointer] + nums[rightPointer] < target) {
